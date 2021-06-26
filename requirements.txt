@@ -1,0 +1,12 @@
+aiohttp
+beautifulsoup4
+git+git://github.com/google/chatbase-python.git
+hachoir
+numpy
+Pillow
+https://github.com/CW4RR10R/pyrogram/archive/asyncio.zip
+requests
+tgcrypto
+git+https://github.com/prgofficial/YouTubeDL
+olefile
+PyDrive
