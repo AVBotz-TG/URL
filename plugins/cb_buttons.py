@@ -190,7 +190,13 @@ async def button(bot, update):
                            reply_markup=markup)
 
     elif "about" in cb_data:
-        button = [[InlineKeyboardButton("🏠 Home", callback_data="home")]]
+        button = [[
+                InlineKeyboardButton("❔ Help", callback_data="morehelp"),
+                InlineKeyboardButton("🏡 Home", callback_data="start"), 
+                InlineKeyboardButton("⛔ Close", callback_data="close")
+                ],[
+                InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
+                ]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
