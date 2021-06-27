@@ -40,9 +40,9 @@ def GetExpiryDate(chat_id):
                 #chat_id=update.chat.id,
                 #text=Translation.START_MSG.format(update.from_user.first_name),
                 #reply_markup = InlineKeyboardMarkup(
-                    #[[InlineKeyboardButton("🗣 Support Group", url=f"t.me/damienhelp"),
-                    #InlineKeyboardButton("💬 Updates Channel", url="t.me/DamienSoukara")],
-                    #[InlineKeyboardButton("⭕ Developer ⭕", url="t.me/AmineSoukara")
+                    #[[InlineKeyboardButton("ℹ️ Support Group", url=f"t.me/AVBotz_Support"),
+                    #InlineKeyboardButton("🤖 Updates Channel", url="t.me/AVBotz")],
+                    #[InlineKeyboardButton("⭕ Developer ⭕", url="t.me/Animesh941")
                     #]]
                 #)
             #)
@@ -61,52 +61,52 @@ async def help_user(bot, update):
 @pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
 async def get_me_info(bot, update):
     # logger.info(update)
+    button = [[
+                InlineKeyboardButton("📮 Feedback DEV", url="https://t.me/Animesh941")
+              ]]
+      markup = InlineKeyboardMarkup(button)
     TRChatBase(update.from_user.id, update.text, "/me")
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
-        parse_mode="html",
+        parse_mode="markdown",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
+        reply_markup=markup
     )
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["donate"]))
-async def donate(bot, update):
-       await bot.send_message(
-             chat_id=update.chat.id,
-             text="I am very happy to listen you this word, making of this bot take lot of work and time so please donate by pressing this button present below",
-             reply_markup=InlineKeyboardMarkup(
-             [
-               [
-                 InlineKeyboardButton('Donate 💰', url='http://paypal.me/AmineSoukara')
-               ]
-             ]
-           )
-          )
+ 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["about"]))
 async def about(bot, update):
+  button = [[
+                InlineKeyboardButton("❔ Help", callback_data="morehelp"),
+                InlineKeyboardButton("🏡 Home", callback_data="start"), 
+                InlineKeyboardButton("⛔ Close", callback_data="close")
+                ],[
+                InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
+                ]]
+      markup = InlineKeyboardMarkup(button)
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.ABOUT.format(update.from_user.first_name),
         parse_mode="markdown",
         disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
+        reply_to_message_id=update.message_id, 
+        reply_markup=markup
     )
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
 async def start(c, m):
       button = [[
-                InlineKeyboardButton("💬 Updates Channel", url="t.me/DamienSoukara"),
-                InlineKeyboardButton("🗣 Support Group", url="t.me/damienhelp"),
-                ],
-                [
-                InlineKeyboardButton("ℹ About", callback_data="about"),
-                InlineKeyboardButton("🤔 Help", callback_data="morehelp")
-                ],
-                [InlineKeyboardButton("🤴 Developer 🤴", url="t.me/AmineSoukara")]]
+                InlineKeyboardButton("❔ How To Use Meh 🤔", callback_data="morehelp")
+                ],[
+                InlineKeyboardButton("😎 DEV", url="t.me/Animesh941"), 
+                InlineKeyboardButton("🤖 About", callback_data="about"),
+                InlineKeyboardButton("⛔ Close", callback_data="close")
+                ]]
       markup = InlineKeyboardMarkup(button)
       await c.send_message(chat_id=m.chat.id,
                            text=Translation.START_MSG.format(m.from_user.first_name),
