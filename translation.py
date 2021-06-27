@@ -13,9 +13,9 @@ I can download your urls, rename your files, convert your files, download youtub
 
 ➤ For URL Uploader :
     
-○ Send Url. [ Link|New Name With Extension ] (Optional)
-○ Send Custom Thumbnail. (Optional)
-○ Select The Button :
+⁍ Send Url. [ Link|New Name With Extension ] (Optional)
+⁍ Send Custom Thumbnail. (Optional)
+⁍ Select The Button :
 
 🎞+📸 SVideo - Give File As Video With Screenshots
 📁+📸 DFile  - Give File With Screenshots
@@ -25,17 +25,17 @@ I can download your urls, rename your files, convert your files, download youtub
 
 ➤ **For Renamer** :
 
-○ Send Me The File To Be Renamed.
-○ Send Me A Thumbnail.
-○ Reply To That Message With /rename New Name.extension. (📁 Upload As File)
-○ Reply to that message with /renamevideo New Name.extension (🎞 Upload As Video)
+⁍ Send Me The File To Be Renamed.
+⁍ Send Me A Thumbnail.
+⁍ Reply To That Message With /rename New Name.extension. (📁 Upload As File)
+⁍ Reply to that message with /renamevideo New Name.extension (🎞 Upload As Video)
 
 ➤ **YouTube DL** :
 
-○ Send Me A Tumbnail if required. It'll be saved permanently.💯
-○ If Thumbnail Wasn't Set By You, It'll Be Auto Generated From The File.🥳
-○ Send Me Youtube Link To Be Uploaded To Telegram.
-○ Press /deletethumbnail To Delete Your Current Custom Thumbnail
+⁍ Send Me A Tumbnail if required. It'll be saved permanently.💯
+⁍ If Thumbnail Wasn't Set By You, It'll Be Auto Generated From The File.🥳
+⁍ Send Me Youtube Link To Be Uploaded To Telegram.
+⁍ Press /deletethumbnail To Delete Your Current Custom Thumbnail
 
 NB : It is Recommended To Use A Custom Thubnail Because, Some Time Bot Wont Upload The File Without a Custom Thumbnail.
 """
