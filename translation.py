@@ -82,31 +82,31 @@ URL | filename | username | password"""
 Extra Help : 
 """
 
-    YTDL = """● YouTube DL
+    YTDL = """➤ **YouTube DL** :
 
-○ Send Me A Tumbnail if required. It'll be saved permanently.💯
-○ If Thumbnail Wasn't Set By You, It'll Be Auto Generated From The File.🥳
-○ Send Me Youtube Link To Be Uploaded To Telegram.
-○ Press /deletethumbnail To Delete Your Current Custom Thumbnail
+⁍ Send Me A Tumbnail if required. It'll be saved permanently.💯
+⁍ If Thumbnail Wasn't Set By You, It'll Be Auto Generated From The File.🥳
+⁍ Send Me Youtube Link To Be Uploaded To Telegram.
+⁍ Press /deletethumbnail To Delete Your Current Custom Thumbnail
 
 NB : It is Recommended To Use A Custom Thubnail Because, Some Time Bot Wont Upload The File Without a Custom Thumbnail.
 """
-    URLDL = """● For URL Uploader :
+    URLDL = """**➤ For URL Uploader :
     
-○ Send Url. [ Link|New Name With Extension ] (Optional)
-○ Send Custom Thumbnail. (Optional)
-○ Select The Button :
+⁍ Send Url. [ Link|New Name With Extension ] (Optional)
+⁍ Send Custom Thumbnail. (Optional)
+⁍ Select The Button :
 
 🎞+📸 SVideo - Give File As Video With Screenshots
 📁+📸 DFile  - Give File With Screenshots
 
 🎞 Video  - Give File As Video Without Screenshots
-📁 File  - Give File Without Screenshots
+📁 File  - Give File Without Screenshots**
 """
-    RENAMERX = """● For Renamer :
+    RENAMERX = """➤ **For Renamer & Converter :
 
-○ Send Me The File To Be Renamed.
-○ Send Me A Thumbnail.
-○ Reply To That Message With /rename New Name.extension. (📁 Upload As File)
-○ Reply to that message with /renamevideo New Name.extension (🎞 Upload As Video)
+⁍ Send Me The File To Be Renamed.
+⁍ Send Me A Thumbnail.
+⁍ Reply To That Message With /rename New Name.extension. (📁 Upload As File)
+⁍ Reply to that message with /renamevideo New Name.extension (🎞️ Upload As Video)**
 """
