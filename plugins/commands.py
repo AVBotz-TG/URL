@@ -108,7 +108,9 @@ async def about(bot, update):
     )
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
-async def start(c, m):
+async def start(bot, update, cb=False):
+    if not cb:
+        send_msg = await update.reply_text("**Processing...**", quote=True)
       button = [[
                 InlineKeyboardButton("❔ How To Use Meh 🤔", callback_data="morehelp")
                 ],[
@@ -117,8 +119,8 @@ async def start(c, m):
                 InlineKeyboardButton("⛔ Close", callback_data="close")
                 ]]
       markup = InlineKeyboardMarkup(button)
-      await c.send_message(chat_id=m.chat.id,
-                           text=Translation.START_MSG.format(m.from_user.first_name),
-                           reply_to_message_id=m.message_id,
+      await bot.send_message(chat_id=update.chat.id,
+                           text=Translation.START_MSG.format(update.from_user.first_name),
+                           reply_to_message_id=update.message_id,
                            reply_markup=markup)
 
