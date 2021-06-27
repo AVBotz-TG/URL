@@ -135,7 +135,7 @@ async def button(bot, update):
         await ddl_call_back(bot, update)
 
     elif "helpx" in cb_data:
-        button = [[InlineKeyboardButton("🏠 Home", callback_data="home")]]
+        button = [[InlineKeyboardButton("🏡 Home", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
@@ -145,7 +145,7 @@ async def button(bot, update):
 
     elif "ytdl" in cb_data:
         button = [[InlineKeyboardButton("🔙 Back", callback_data="morehelp"),
-                InlineKeyboardButton("🏠 Home", callback_data="home")]]
+                InlineKeyboardButton("🏡 Home", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
@@ -155,7 +155,7 @@ async def button(bot, update):
 
     elif "urldl" in cb_data:
         button = [[InlineKeyboardButton("🔙 Back", callback_data="morehelp"),
-                InlineKeyboardButton("🏠 Home", callback_data="home")]]
+                InlineKeyboardButton("🏡 Home", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
@@ -165,7 +165,7 @@ async def button(bot, update):
 
     elif "renamerx" in cb_data:
         button = [[InlineKeyboardButton("🔙 Back", callback_data="morehelp"),
-                InlineKeyboardButton("🏠 Home", callback_data="home")]]
+                InlineKeyboardButton("🏡 Home", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
@@ -182,7 +182,7 @@ async def button(bot, update):
                 InlineKeyboardButton("🎞️ YouTube DL", callback_data="ytdl"),
                 InlineKeyboardButton("📮 Feedback", url="t.me/Animesh941")
                 ],
-                [InlineKeyboardButton("🏡 Back to Home", callback_data="home")]]
+                [InlineKeyboardButton("🏡 Back to Home 🔝", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
