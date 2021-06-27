@@ -14,9 +14,9 @@
     "remote",
     "uploader"
   ],
-  "success_url": "https://telegram.dog/ReFileRobot",
-  "website": "https://github.com/AmineSoukara/Url-DL",
-  "repository": "https://github.com/AmineSoukara/Url-DL",
+  "success_url": "https://github.com/AVBotz-TG/URL",
+  "website": "https://github.com/AVBotz-TG/URL",
+  "repository": "https://github.com/AVBotz-TG/URL",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
