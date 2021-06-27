@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ©️ @AmineSoukara
+# ©️ @AVBotz 
 
 # the logging things
 import logging
@@ -36,7 +36,7 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 @pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D 🤣🤣🤣🤣")
+        await update.reply_text("**You are BANNED, Contact us [Here](https://t.me/AVBotz_Support) 🤓**")
         return
     TRChatBase(update.from_user.id, update.text, "/echo")
     update_channel = Config.UPDATE_CHANNEL
@@ -44,19 +44,19 @@ async def echo(bot, update):
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
-               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D 🤣🤣🤣**")
+               await update.reply_text("**🤭 Sorry Dude, You are BANNED... \nContact us [Here](https://t.me/AVBotz_Support) 🤖**")
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="[●](https://i.imgur.com/t1JsZ0I.gif) **Join My Updates Channel To Mse Me : **",
+                text="**● Join My Updates Channel To Use Meh ●**\n__Hit /start once you joined.. 😉__",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Subscribe", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="📢 Join Updates Channel 👀", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text("Something Wrong. Contact my Support Group")
+            await update.reply_text("**Something Wrong. Contact my [Support Group](https://t.me/AVBotz_Support)**")
             return
     logger.info(update.from_user)
     url = update.text
@@ -139,14 +139,14 @@ async def echo(bot, update):
     # https://github.com/rg3/youtube-dl/issues/2630#issuecomment-38635239
     if e_response and "nonnumeric port" not in e_response:
         # logger.warn("Status : FAIL", exc.returncode, exc.output)
-        error_message = e_response.replace("please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.", "")
+        error_message = e_response.replace("**Unable to download using this link, May be Corrupted or age restricted 🙄**" )
         if "This video is only available for registered users." in error_message:
             error_message += Translation.SET_CUSTOM_USERNAME_PASSWORD
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.NO_VOID_FORMAT_FOUND.format(str(error_message)),
             reply_to_message_id=update.message_id,
-            parse_mode="html",
+            parse_mode="markdown",
             disable_web_page_preview=True
         )
         return False
@@ -229,7 +229,9 @@ async def echo(bot, update):
                 ])
                 inline_keyboard.append([
                     pyrogram.InlineKeyboardButton(
-                        "🎵 MP3 " + "(" + "320 kbps" + ")", callback_data=cb_string.encode("UTF-8"))
+                        "🎵 MP3 " + "(" + "320 kbps" + ")", callback_data=cb_string.encode("UTF-8")),
+                    pyrogram.InlineKeyboardButton(
+                        "👥 Support", url="https://t.me/AVBotz_Support")
                 ])
         else:
             format_id = response_json["format_id"]
@@ -289,7 +291,7 @@ async def echo(bot, update):
             chat_id=update.chat.id,
             text=Translation.FORMAT_SELECTION.format(thumbnail) + "\n" + Translation.SET_CUSTOM_USERNAME_PASSWORD,
             reply_markup=reply_markup,
-            parse_mode="html",
+            parse_mode="markdown",
             reply_to_message_id=update.message_id
         )
     else:
@@ -314,6 +316,6 @@ async def echo(bot, update):
             chat_id=update.chat.id,
             text=Translation.FORMAT_SELECTION.format(""),
             reply_markup=reply_markup,
-            parse_mode="html",
+            parse_mode="markdown",
             reply_to_message_id=update.message_id
         )
