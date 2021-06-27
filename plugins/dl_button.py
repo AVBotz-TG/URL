@@ -268,9 +268,9 @@ async def download_coroutine(bot, session, url, file_name, chat_id, message_id, 
         await bot.edit_message_text(
             chat_id,
             message_id,
-            text="""Initiating Download
+            text="""**Initiating Download
 URL: {}
-File Size: {}""".format(url, humanbytes(total_length))
+File Size: {}**""".format(url, humanbytes(total_length))
         )
         with open(file_name, "wb") as f_handle:
             while True:
