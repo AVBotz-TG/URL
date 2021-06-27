@@ -135,7 +135,15 @@ async def button(bot, update):
         await ddl_call_back(bot, update)
 
     elif "helpx" in cb_data:
-        button = [[InlineKeyboardButton("🏡 Home", callback_data="home")]]
+        button = [[
+                InlineKeyboardButton("🌐 Url Upload", callback_data="urldl"),
+                InlineKeyboardButton("✍🏻 Renamer", callback_data="renamerx"),
+                ],
+                [
+                InlineKeyboardButton("🎞️ YouTube DL", callback_data="ytdl"),
+                InlineKeyboardButton("📮 Feedback", url="t.me/Animesh941")
+                ],
+                [InlineKeyboardButton("🏡 Back to Home 🔝", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
@@ -206,14 +214,12 @@ async def button(bot, update):
 
     elif "home" in cb_data:
       button = [[
-                InlineKeyboardButton("💬 Updates Channel", url="t.me/DamienSoukara"),
-                InlineKeyboardButton("🗣 Support Group", url="t.me/damienhelp"),
-                ],
-                [
-                InlineKeyboardButton("ℹ About", callback_data="about"),
-                InlineKeyboardButton("🤔 Help", callback_data="morehelp")
-                ],
-                [InlineKeyboardButton("🤴 Developer 🤴", url="t.me/AmineSoukara")]]
+                InlineKeyboardButton("❔ How To Use Meh 🤔", callback_data="morehelp")
+                ],[
+                InlineKeyboardButton("😎 DEV", url="t.me/Animesh941"), 
+                InlineKeyboardButton("🤖 About", callback_data="about"),
+                InlineKeyboardButton("⛔ Close", callback_data="close")
+                ]]
       markup = InlineKeyboardMarkup(button)
       await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
