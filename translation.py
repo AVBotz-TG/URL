@@ -11,7 +11,7 @@ I can download your urls, rename your files, convert your files, download youtub
 """
     HELP_USER = """**Hey {}
 
-● For URL Uploader :
+➤ For URL Uploader :
     
 ○ Send Url. [ Link|New Name With Extension ] (Optional)
 ○ Send Custom Thumbnail. (Optional)
@@ -23,14 +23,14 @@ I can download your urls, rename your files, convert your files, download youtub
 🎞 Video  - Give File As Video Without Screenshots
 📁 File  - Give File Without Screenshots
 
-● **For Renamer** :
+➤ **For Renamer** :
 
 ○ Send Me The File To Be Renamed.
 ○ Send Me A Thumbnail.
 ○ Reply To That Message With /rename New Name.extension. (📁 Upload As File)
 ○ Reply to that message with /renamevideo New Name.extension (🎞 Upload As Video)
 
-● **YouTube DL** :
+➤ **YouTube DL** :
 
 ○ Send Me A Tumbnail if required. It'll be saved permanently.💯
 ○ If Thumbnail Wasn't Set By You, It'll Be Auto Generated From The File.🥳
