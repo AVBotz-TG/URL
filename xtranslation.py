@@ -10,10 +10,9 @@ class XTranslation(object):
     CUSTOM_CAPTION_UL_FILE = "**©️ @AVBotz**"
     REPLY_TO_DOC_FOR_RENAME_FILE = "**🤦🏻‍♂️ Reply To A Telegram Media with `/rename New Name.extension` to rename your file as file with custom thumbnail support.**"
     REPLY_TO_DOC_FOR_RENAME_VIDEO = "**🤦🏻‍♂️ Reply To A Telegram Media with `/rename_video New Name.extension` to rename file as video with custom thumbnail support.**"
-    IFLONG_FILE_NAME = """**File Name limit allowed by Telegram is {alimit} characters. The given file name has {num} characters.**
+    IFLONG_FILE_NAME = """**File Name limit allowed by Telegram is {alimit} characters. The given file name has {num} characters.
 
-**Essays Not allowed in Telegram file name!**
-**©️ @AVBotz**
-Please short your file name and try again!"""
+Please short your file name and try again!
+©️ @AVBotz**"""
 
     
