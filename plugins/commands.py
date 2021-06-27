@@ -53,10 +53,19 @@ async def help_user(bot, update):
     TRChatBase(update.from_user.id, update.text, "/help")
     await update.reply_text(
                 text=Translation.HELP_USER.format(update.from_user.first_name),
-                reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="📢 More Help", url=f"https://t.me/DamienHelp")]
-              ])
-            )
+                reply_markup=InlineKeyboardMarkup(
+                  [[
+                    InlineKeyboardButton("🌐 Url Upload", callback_data="urldl"),
+                    InlineKeyboardButton("✍🏻 Renamer", callback_data="renamerx"),
+                   ],
+                    [
+                    InlineKeyboardButton("🎞️ YouTube DL", callback_data="ytdl"),
+                    InlineKeyboardButton("📮 Feedback", url="t.me/Animesh941")
+                    ],
+                [InlineKeyboardButton("🏡 Back to Home", callback_data="home")
+              ]]
+             )
+           )
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
 async def get_me_info(bot, update):
@@ -83,7 +92,7 @@ async def get_me_info(bot, update):
 async def about(bot, update):
   button = [[
                 InlineKeyboardButton("❔ Help", callback_data="morehelp"),
-                InlineKeyboardButton("🏡 Home", callback_data="start"), 
+                InlineKeyboardButton("🏡 Home", callback_data="home"), 
                 InlineKeyboardButton("⛔ Close", callback_data="close")
                 ],[
                 InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
