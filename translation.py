@@ -44,7 +44,7 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 🎉 Congrats, You are the one who selected as the vip user..🎊
 © @AVBotz 👀**"""
 
-    FORMAT_SELECTION = "**Select The Desired Format from Below Buttons.. : File Size Might Be Approximate\n\nIf You Want To Set your Custom Thumbnail, Send Photo Before Or Quickly After Tapping On Any Of The Below Buttons.\nYou Can Use /deletethumbnail To Delete The Auto-Generated Thumbnail.**"
+    FORMAT_SELECTION = "**Select the desired format from the below buttons :\n__Unable to use, Check /help__\n\nSend a photo to set it as your custom thumbnail\nYou can use /deletethumbnail to delete the auto-generated thumbnail.**"
     SET_CUSTOM_USERNAME_PASSWORD = """**If You Want To Download Premium Videos, Provide in The Following Format:
 URL | filename | username | password**"""
     DOWNLOAD_START = "**📥 Trying To Download, Please Wait..**"
