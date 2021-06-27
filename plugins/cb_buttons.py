@@ -225,3 +225,8 @@ async def button(bot, update):
                            message_id=update.message.message_id,
                            text=Translation.START_MSG.format(update.from_user.first_name),
                            reply_markup=markup)
+
+      elif "close" in cb_data:
+        await query.message.reply_to_message.delete()
+        await query.message.delete()
+        
