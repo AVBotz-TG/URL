@@ -34,7 +34,7 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 **● Source Code : [Click Here](https://t.me/Want_SourceCode)**
 
 **© @AVBotz | @AVBotz_Support**
-""
+"""
     CURENT_PLAN_DETAILS = """ℹ **Current Plan Details :
 🏷️ Telegram ID:** `{}`
 **🏷️ Plan Name: VIP User
@@ -51,12 +51,12 @@ URL | filename | username | password**"""
     RCHD_TG_API_LIMIT = "**Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I Cannot Upload Files Greater Than 1.9GB Due To Telegram API Limitations.**"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded In {} Seconds. \nUploaded In {} Seconds. \n\n Join @AVBotz ❤️**"
     SAVED_CUSTOM_THUMB_NAIL = "**🖼 Custom Video / File Thumbnail Saved. This Image Will Be Used In The Video / File.**"
-    DEL_ETED_CUSTOM_THUMB_NAIL = "**❌ Custom Thumbnail Cleared Succesfully.**"
+    DEL_ETED_CUSTOM_THUMB_NAIL = "**🗑️ Custom Thumbnail Cleared Succesfully.**"
     CUSTOM_CAPTION_UL_FILE = "**© @AVBotz 👀**"
     NO_VOID_FORMAT_FOUND = "**❌ ERROR...\nYouTubeDL Said: {}**"
     REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "**Reply /generatecustomthumbnail To A Media Album, To Generate Custom Thumbail**"
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "**Media Album Should Contain Only Two Photos. Please Re-Send The Media Album, And Then Try Again, Or Send Only Two Photos In An Album.**"
-    CANCEL_STR = "**❌ Process Cancelled**"
+    CANCEL_STR = "**🌝 Process Cancelled**"
     ZIP_UPLOADED_STR = "**Uploaded {} Files In {} Seconds**"
     SLOW_URL_DECED = "**Oops..! Your Given Link is too slow for me to download, Generate a fast link and try again**"
 
