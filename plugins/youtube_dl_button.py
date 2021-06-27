@@ -250,7 +250,7 @@ async def youtube_dl_call_back(bot, update):
                     chat_id=update.message.chat.id,
                     audio=download_directory,
                     caption=description,
-                    parse_mode="HTML",
+                    parse_mode="MARKDOWN",
                     duration=duration,
                     # performer=response_json["uploader"],
                     # title=response_json["title"],
@@ -270,7 +270,7 @@ async def youtube_dl_call_back(bot, update):
                     document=download_directory,
                     thumb=thumb_image_path,
                     caption=description,
-                    parse_mode="HTML",
+                    parse_mode="MARKDOWN",
                     # reply_markup=reply_markup,
                     reply_to_message_id=update.message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
@@ -300,7 +300,7 @@ async def youtube_dl_call_back(bot, update):
                     chat_id=update.message.chat.id,
                     video=download_directory,
                     caption=description,
-                    parse_mode="HTML",
+                    parse_mode="MARKDOWN",
                     duration=duration,
                     width=width,
                     height=height,
@@ -323,9 +323,9 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @DamienSoukara"
+                caption = "**__Uploaded By © @AVBotz ❤️__**"
                 if is_w_f:
-                    caption = "/upgrade to Plan D to remove the watermark\n© @Bot"
+                    caption = "**Contact @AVBotz_Support**"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
@@ -333,7 +333,7 @@ async def youtube_dl_call_back(bot, update):
                                 pyrogram.InputMediaPhoto(
                                     media=image,
                                     caption=caption,
-                                    parse_mode="html"
+                                    parse_mode="markdown"
                                 )
                             )
                         else:
