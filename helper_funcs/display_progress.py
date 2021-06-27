@@ -42,28 +42,33 @@ async def progress_for_pyrogram(
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-        progress = "({0}{1})**{2}%**\n".format(
+        progress = "**⛕ ({0}{1}) {2}%**\n".format(
             ''.join(["●" for i in range(math.floor(percentage / 7))]),
             ''.join(["○" for i in range(14 - math.floor(percentage / 7))]),
            round(percentage, 2))
+        
+        tmp = progress + """
+        **┈┈••✿ @AVBotz ✿••┈┈
 
-        tmp = progress + "**✅ Done: **{0} \n**💾 Total:** {1}\n**🚀 Speed:** {2}/s \n**⏰ Time:** {3}\n".format(
+      🐌 Speed : {2}/s
+      📥 Done : {0}
+      📮 Total size  : {1}
+      🗑️ Time Left : {3}
+
+      ✅ Thank You for Using Me..!**""".format(
+            humanbytes(speed),
             humanbytes(current),
             humanbytes(total),
-            humanbytes(speed),
             # elapsed_time if elapsed_time != '' else "0 s",
             estimated_total_time if time_to_completion != '' else "0 s"
-        )
+        buttons = [[InlineKeyboardButton(f'📢 Updates Channel', url='https://t.me/AVBotz')]] 
+        markup = InlineKeyboardMarkup(buttons) 
         try:
-            await message.edit(
-                text="{}\n {}".format(
+            await msg.edit(text="{}\n {}".format(
                     ud_type,
-                    tmp
-                )
-            )
+                    tmp), reply_markup=markup)
         except:
             pass
-
 
 def humanbytes(size):
     # https://stackoverflow.com/a/49361727/4723940
