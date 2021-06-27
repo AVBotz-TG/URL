@@ -48,7 +48,9 @@ def GetExpiryDate(chat_id):
             #)
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["help"]))
-async def help_user(bot, update):
+async def help_user(bot, update, cb=False):
+    if not cb:
+        send_msg = await update.reply_text("**Processing...**", quote=True)
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/help")
     await update.reply_text(
@@ -66,9 +68,16 @@ async def help_user(bot, update):
               ]]
              )
            )
-
+    if cb:
+        return await update.message.edit(
+                   text=text,
+                   reply_markup=InlineKeyboardMarkup(buttons)
+               )
+      
 @pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
-async def get_me_info(bot, update):
+async def get_me_info(bot, update, cb=False):
+    if not cb:
+        send_msg = await update.reply_text("**Collecting your info...**", quote=True)
     # logger.info(update)
     button = [[
                 InlineKeyboardButton("📮 Feedback DEV", url="https://t.me/Animesh941")
@@ -85,7 +94,11 @@ async def get_me_info(bot, update):
         reply_to_message_id=update.message_id
         reply_markup=markup
     )
-
+   if cb:
+        return await update.message.edit(
+                   text=text,
+                   reply_markup=InlineKeyboardMarkup(buttons)
+               )
  
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["about"]))
@@ -123,4 +136,8 @@ async def start(bot, update, cb=False):
                            text=Translation.START_MSG.format(update.from_user.first_name),
                            reply_to_message_id=update.message_id,
                            reply_markup=markup)
-
+     if cb:
+        return await update.message.edit(
+                   text=text,
+                   reply_markup=InlineKeyboardMarkup(buttons)
+               )
