@@ -7,7 +7,10 @@ I can download your urls, rename your files, convert your files, download youtub
 
 ● Url Uploader 
 ● Renamer & Converter
-● YouTube DL**
+● YouTube DL
+
+Check Below Buttons for more... 
+🤖 Developer : [Animesh Verma](https://t.me/Animesh941)**
 """
     HELP_USER = """**Hey {}, I'm "All in One Uploader Bot" 
 ➤ I can Rename your files 📂 
@@ -21,21 +24,17 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 """
 
     ABOUT = """
-**Your Name : {}
+**● My Name : Image Editor Bot**
+**● Creator : [Animesh Verma](https://telegram.me/AniMesH941)**
+**● Channel : [AVBotz](https://telegram.me/AVBotz)**
+**● Support Group : [Click Here](https://t.me/AVBotz_Support)**
+**● Language : [Python3](https://python.org)**
+**● Library : [Pyrogram](https://pyrogram.org)**
+**● Server : [Heroku](https://heroku.com)**
+**● Source Code : [Click Here](https://t.me/Want_SourceCode)**
 
-**📝 Language:** Python 3 
-
-**🧰 Framework:** Pyrogram
-
-**📮 Channel:** [@DamienSoukara](https://t.me/DamienSoukara)
-
-**👥 Group:** [@DamienHelp](https://t.me/DamienHelp)
-
-**👨‍💻 Developer:** [@AmineSoukara](t.me/AmineSoukara)
-
-**©️ Source Code:** [Here](t.me/AmineSoukara)
-
-"""
+**© @AVBotz | @AVBotz_Support**
+""
     CURENT_PLAN_DETAILS = """ℹ **Current Plan Details :
 🏷️ Telegram ID:** `{}`
 **🏷️ Plan Name: VIP User
