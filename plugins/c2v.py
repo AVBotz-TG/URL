@@ -37,7 +37,7 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 @pyrogram.Client.on_message(pyrogram.Filters.command(["renamevideo", "v"]))
 async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D 🤣🤣🤣🤣")
+        await update.reply_text("**You are BANNED, Contact us [Here](https://t.me/AVBotz_Support) 🤓**")
         return
     TRChatBase(update.from_user.id, update.text, "rename")
     update_channel = Config.UPDATE_CHANNEL
@@ -45,19 +45,19 @@ async def rename_video(bot, update):
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
-               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D 🤣🤣🤣**")
+               await update.reply_text("**🤭 Sorry Dude, You are BANNED... \nContact us [Here](https://t.me/AVBotz_Support) 🤖**")
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="[●](https://i.imgur.com/t1JsZ0I.gif) **Join My Updates Channel To Mse Me : **",
+                text="**● Join My Updates Channel To Use Meh ●**\n__Hit /start once you joined.. 😉__",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Subscribe", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="📢 Join Updates Channel 👀", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text("Something Wrong. Contact @AmineSoukara")
+            await update.reply_text("**Something Wrong. Contact my [Support Group](https://t.me/AVBotz_Support)**")
             return
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
