@@ -47,7 +47,7 @@ async def progress_for_pyrogram(
             ''.join(["○" for i in range(14 - math.floor(percentage / 7))]),
            round(percentage, 2))
         
-        tmp = progress + """
+        message = progress + """
         **┈┈••✿ @AVBotz ✿••┈┈
 
       🐌 Speed : {2}/s
@@ -66,7 +66,7 @@ async def progress_for_pyrogram(
         try:
             await msg.edit(text="{}\n {}".format(
                     ud_type,
-                    tmp), reply_markup=markup)
+                    message), reply_markup=markup)
         except:
             pass
 
