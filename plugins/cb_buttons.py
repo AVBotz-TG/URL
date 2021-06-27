@@ -176,13 +176,13 @@ async def button(bot, update):
     elif "morehelp" in cb_data:
         button = [[
                 InlineKeyboardButton("🌐 Url Upload", callback_data="urldl"),
-                InlineKeyboardButton("✍ Renamer", callback_data="renamerx"),
+                InlineKeyboardButton("✍🏻 Renamer", callback_data="renamerx"),
                 ],
                 [
-                InlineKeyboardButton("🎞 YouTube DL", callback_data="ytdl"),
-                InlineKeyboardButton("🤖 Feedback", url="t.me/DamienRobot")
+                InlineKeyboardButton("🎞️ YouTube DL", callback_data="ytdl"),
+                InlineKeyboardButton("📮 Feedback", url="t.me/Animesh941")
                 ],
-                [InlineKeyboardButton("🏠 Home", callback_data="home")]]
+                [InlineKeyboardButton("🏡 Back to Home", callback_data="home")]]
         markup = InlineKeyboardMarkup(button)
         await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
