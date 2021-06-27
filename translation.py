@@ -1,12 +1,17 @@
 class Translation(object):
 
-    START_MSG = """[👋](https://i.imgur.com/wF1voFb.gif)  Hello **{}**
+    START_MSG = """**👋🏻 Hello {}, 
 
-○ Url Uploader ○ Renamer ○ YouTube DL
+I'm a Simple All In One Uploader Bot 😉
+I can download your urls, rename your files, convert your files, download youtube videos and audios, etc 😁
+
+● Url Uploader 
+● Renamer & Converter
+● YouTube DL**
 """
-    HELP_USER = """Hi **{}** 👋
+    HELP_USER = """**Hey {}
 
-● **For URL Uploader** :
+● For URL Uploader :
     
 ○ Send Url. [ Link|New Name With Extension ] (Optional)
 ○ Send Custom Thumbnail. (Optional)
@@ -35,7 +40,8 @@ class Translation(object):
 NB : It is Recommended To Use A Custom Thubnail Because, Some Time Bot Wont Upload The File Without a Custom Thumbnail.
 """
 
-    ABOUT = """Hi {},
+    ABOUT = """
+**Your Name : {}
 
 **📝 Language:** Python 3 
 
