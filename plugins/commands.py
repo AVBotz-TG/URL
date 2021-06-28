@@ -92,17 +92,9 @@ async def get_me_info(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
 async def about(bot, update):
-  button=[[
-                InlineKeyboardButton("❔ Help", callback_data="morehelp"),
-                InlineKeyboardButton("🏡 Home", callback_data="home"), 
-                InlineKeyboardButton("⛔ Close", callback_data="close")
-                ],[
-                InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
-                ]]
-      markup=InlineKeyboardMarkup(button)
     await update.reply_text(
         chat_id=update.chat.id,
-        text=Translation.ABOUT.format(update.from_user.first_name),
+        text=Translation.ABOUT,
         parse_mode="markdown",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id, 
