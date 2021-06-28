@@ -129,7 +129,7 @@ await update.reply_text(
                         ]]
                     )
                ) 
-    if cb:
+   if cb:
        return await update.message.edit(
                     text=text,
                     reply_markup=InlineKeyboardMarkup(button)
