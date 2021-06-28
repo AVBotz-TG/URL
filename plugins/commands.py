@@ -85,7 +85,6 @@ async def get_me_info(bot, update):
 @pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
 async def about(bot, update):
     await update.reply_text(
-        chat_id=update.chat.id,
         text=Translation.ABOUT,
         parse_mode="markdown",
         disable_web_page_preview=True,
@@ -104,7 +103,6 @@ async def about(bot, update):
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 async def start(bot, update):
   await update.reply_text(
-      chat_id=update.chat.id,
       disable_web_page_preview=True,
       text=Translation.START_MSG.format(update.from_user.first_name),
       reply_to_message_id=update.message_id,
