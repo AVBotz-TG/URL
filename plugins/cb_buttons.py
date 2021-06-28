@@ -27,7 +27,6 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
@@ -204,7 +203,7 @@ async def button(bot, update):
     elif "about" in cb_data:
         button = [[
                 InlineKeyboardButton("❔ Help", callback_data="morehelp"),
-                InlineKeyboardButton("🏡 Home", callback_data="start"), 
+                InlineKeyboardButton("🏡 Home", callback_data="about"), 
                 InlineKeyboardButton("⛔ Close", callback_data="close")
                 ],[
                 InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
@@ -227,6 +226,7 @@ async def button(bot, update):
       markup = InlineKeyboardMarkup(button)
       await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
+                           disable_web_page_preview=True,
                            text=Translation.START_MSG.format(update.from_user.first_name),
                            reply_markup=markup
                                  )
