@@ -113,22 +113,22 @@ async def about(bot, update):
 async def start(bot, update, cb=False):
     if not cb:
         send_msg = await update.reply_text("**Processing...**", quote=True)
-      await update.reply_text(
-            chat_id=update.chat.id,
-            text=Translation.START_MSG.format(update.from_user.first_name),
-            reply_to_message_id=update.message_id,
-            reply_markup=InlineKeyboardMarkup(
-              [[
-                   InlineKeyboardButton("❔ How To Use Meh 🤔", callback_data="morehelp")
-                   ],[
-                   InlineKeyboardButton("😎 DEV", url="t.me/Animesh941"), 
-                   InlineKeyboardButton("🤖 About", callback_data="about"),
-                   InlineKeyboardButton("⛔ Close", callback_data="close")
-                 ]]
-              )
-           ) 
+                   await update.reply_text(
+                              chat_id=update.chat.id,
+                              text=Translation.START_MSG.format(update.from_user.first_name),
+                              reply_to_message_id=update.message_id,
+                              reply_markup=InlineKeyboardMarkup(
+                                              [[
+                                                InlineKeyboardButton("❔ How To Use Meh 🤔", callback_data="morehelp")
+                                               ],[
+                                                InlineKeyboardButton("😎 DEV", url="t.me/Animesh941"), 
+                                                InlineKeyboardButton("🤖 About", callback_data="about"),
+                                                InlineKeyboardButton("⛔ Close", callback_data="close")
+                                               ]]
+                                           )
+                                       ) 
      if cb:
-        return await update.message.edit(
+         return await update.message.edit(
                    text=text,
                    reply_markup=InlineKeyboardMarkup(button)
                )
