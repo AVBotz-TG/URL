@@ -48,9 +48,7 @@ def GetExpiryDate(chat_id):
             #)
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
-async def help_user(bot, update, cb=False):
-    if not cb:
-        send_msg = await update.reply_text("**Processing...**", quote=True)
+async def help_user(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/help")
     await update.reply_text(
@@ -68,19 +66,13 @@ async def help_user(bot, update, cb=False):
               ]]
              )
            )
-    if cb:
-        return await update.message.edit(
-                   text=text,
-                   reply_markup=InlineKeyboardMarkup(button)
-               )
       
 @pyrogram.Client.on_message(pyrogram.filters.command(["me"]))
 async def get_me_info(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/me")
     chat_id = str(update.from_user.id)
-    chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
-    send_msg = await update.reply_text("**Collecting your info...**", quote=True) 
+    chat_id, plan_type, expires_at = GetExpiryDate(chat_id) 
     await update.reply_text(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
@@ -110,13 +102,10 @@ async def about(bot, update):
     )
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
-async def start(bot, update, cb=False):
-  if not cb:
-        send_msg = await update.reply_text(
-                   "**Processing...**", 
-                   quote=True)
+async def start(bot, update):
   await update.reply_text(
       chat_id=update.chat.id,
+      disable_web_page_preview=True,
       text=Translation.START_MSG.format(update.from_user.first_name),
       reply_to_message_id=update.message_id,
       reply_markup=InlineKeyboardMarkup(
@@ -129,8 +118,3 @@ async def start(bot, update, cb=False):
                         ]]
                     )
                ) 
-  if cb:
-    return await update.message.edit(
-                        text=text,
-                        reply_markup=InlineKeyboardMarkup(button)
-                          )
