@@ -23,8 +23,6 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from helper_funcs.chat_base import TRChatBase
-
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 
 def GetExpiryDate(chat_id):
@@ -50,7 +48,6 @@ def GetExpiryDate(chat_id):
 @pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
 async def help_user(bot, update):
     # logger.info(update)
-    TRChatBase(update.from_user.id, update.text, "/help")
     await update.reply_text(
                 text=Translation.HELP_USER.format(update.from_user.first_name),
                 reply_markup=InlineKeyboardMarkup(
@@ -70,7 +67,6 @@ async def help_user(bot, update):
 @pyrogram.Client.on_message(pyrogram.filters.command(["me"]))
 async def get_me_info(bot, update):
     # logger.info(update)
-    TRChatBase(update.from_user.id, update.text, "/me")
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id) 
     await bot.send_message(
