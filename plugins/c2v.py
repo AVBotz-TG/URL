@@ -34,7 +34,7 @@ from PIL import Image
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["renamevideo", "v"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["renamevideo", "v"]))
 async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("**You are BANNED, Contact us [Here](https://t.me/AVBotz_Support) 🤓**")
