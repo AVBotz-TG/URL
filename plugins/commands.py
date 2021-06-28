@@ -81,15 +81,12 @@ async def get_me_info(bot, update):
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
     send_msg = await update.reply_text("**Collecting your info...**", quote=True) 
-    await update.reply_text(
+    await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
         parse_mode="markdown",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
-        reply_markup=InlineKeyboardMarkup(
-          [[InlineKeyboardButton("📮 Feedback DEV 👀", url="https://t.me/Animesh941")]]
-         ) 
       )
  
 
