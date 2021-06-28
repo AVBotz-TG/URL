@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ©️ @AmineSoukara 
+# ©️ @AVBotz-TG
 
 # the logging things
 import logging
@@ -23,7 +23,6 @@ from xtranslation import XTranslation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import Client, Filters
-
 from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
 
