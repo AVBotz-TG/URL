@@ -130,8 +130,8 @@ async def start(bot, update, cb=False):
                     )
                ) 
 if cb:
-   return 
-         await update.message.edit(
+ return 
+       await update.message.edit(
                            text=text,
                            reply_markup=InlineKeyboardMarkup(button)
                           )
