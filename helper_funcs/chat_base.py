@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ©️ @AmineSoukara.
+# ©️ @AVBotz-TG
 
 # the logging things
 import logging
@@ -19,7 +19,7 @@ else:
 # the Strings used for this "thing"
 from translation import Translation
 
-from pyrogram import Client, Filters
+from pyrogram import Client, Filter
 
 # the Telegram trackings
 from chatbase import Message
