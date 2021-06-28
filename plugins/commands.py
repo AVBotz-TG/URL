@@ -32,7 +32,7 @@ def GetExpiryDate(chat_id):
     Config.AUTH_USERS.add(853393439)
     return expires_at
 
-#@pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
+#@pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 #async def start(bot, update):
     # logger.info(update)
     #TRChatBase(update.from_user.id, update.text, "/start")
@@ -81,7 +81,7 @@ async def get_me_info(bot, update):
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
     send_msg = await update.reply_text("**Collecting your info...**", quote=True) 
-    await bot.send_message(
+    await update.reply_text(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
         parse_mode="markdown",
