@@ -112,9 +112,10 @@ async def about(bot, update):
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 async def start(bot, update, cb=False):
     if not cb:
-        send_msg = await update.reply_text("**Processing...**", quote=True)
-                  
-           await update.reply_text(
+        send_msg = await update.reply_text(
+                   "**Processing...**", 
+                   quote=True)
+             await update.reply_text(
                    chat_id=update.chat.id,
                    text=Translation.START_MSG.format(update.from_user.first_name),
                    reply_to_message_id=update.message_id,
