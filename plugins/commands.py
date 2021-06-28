@@ -106,7 +106,15 @@ async def about(bot, update):
         parse_mode="markdown",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id, 
-        reply_markup=markup
+        reply_markup=InlineKeyboardMarkup(
+          [[
+                InlineKeyboardButton("❔ Help", callback_data="morehelp"),
+                InlineKeyboardButton("🏡 Home", callback_data="home"), 
+                InlineKeyboardButton("⛔ Close", callback_data="close")
+                ],[
+                InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
+                ]]
+         ) 
     )
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
@@ -124,7 +132,16 @@ async def start(bot, update, cb=False):
       await update.reply_text(chat_id=update.chat.id,
                            text=Translation.START_MSG.format(update.from_user.first_name),
                            reply_to_message_id=update.message_id,
-                           reply_markup=markup)
+                           reply_markup=InlineKeyboardMarkup(
+                             [[
+                               InlineKeyboardButton("❔ How To Use Meh 🤔", callback_data="morehelp")
+                              ],[
+                               InlineKeyboardButton("😎 DEV", url="t.me/Animesh941"), 
+                               InlineKeyboardButton("🤖 About", callback_data="about"),
+                               InlineKeyboardButton("⛔ Close", callback_data="close")
+                              ]]
+                           )
+                         ) 
      if cb:
         return await update.message.edit(
                    text=text,
