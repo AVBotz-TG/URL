@@ -81,7 +81,7 @@ async def get_me_info(bot, update):
     chat_id = str(update.from_user.id)
     chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
     send_msg = await update.reply_text("**Collecting your info...**", quote=True) 
-    await bot.send_message(
+    await update.reply_text(
         chat_id=update.chat.id,
         text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
         parse_mode="markdown",
@@ -100,7 +100,7 @@ async def about(bot, update):
                 InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
                 ]]
       markup = InlineKeyboardMarkup(button)
-    await bot.send_message(
+    await update.reply_text(
         chat_id=update.chat.id,
         text=Translation.ABOUT.format(update.from_user.first_name),
         parse_mode="markdown",
@@ -121,7 +121,7 @@ async def start(bot, update, cb=False):
                 InlineKeyboardButton("⛔ Close", callback_data="close")
                 ]]
       markup = InlineKeyboardMarkup(button)
-      await bot.send_message(chat_id=update.chat.id,
+      await update.reply_text(chat_id=update.chat.id,
                            text=Translation.START_MSG.format(update.from_user.first_name),
                            reply_to_message_id=update.message_id,
                            reply_markup=markup)
