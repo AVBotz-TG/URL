@@ -24,7 +24,6 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
-from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
 
 from hachoir.metadata import extractMetadata
@@ -39,7 +38,6 @@ async def rename_video(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("**You are BANNED, Contact us [Here](https://t.me/AVBotz_Support) 🤓**")
         return
-    TRChatBase(update.from_user.id, update.text, "rename")
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
         try:
