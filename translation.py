@@ -12,7 +12,8 @@ I can download your urls, rename your files, convert your files, download youtub
 Check Below Buttons for more... 
 🤖 Developer : [Animesh Verma](https://t.me/Animesh941)**
 """
-    HELP_USER = """**Hey {}, I'm "All in One Uploader Bot" 
+    HELP_USER = """**Hey {}, I'm a All in One Uploader Bot... 
+    
 ➤ I can Rename your files 📂 
 ➤ I can convert your files 🎞️
 ➤ I can download your files using url links.. 
@@ -24,7 +25,7 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 """
 
     ABOUT = """
-**● My Name : Image Editor Bot**
+**● My Name : All In One Uploader Bot**
 **● Creator : [Animesh Verma](https://telegram.me/AniMesH941)**
 **● Channel : [AVBotz](https://telegram.me/AVBotz)**
 **● Support Group : [Click Here](https://t.me/AVBotz_Support)**
@@ -43,7 +44,7 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 🎉 Congrats, You are the one who selected as the vip user..🎊
 © @AVBotz 👀**"""
 
-    FORMAT_SELECTION = "**Select the desired format from the below buttons :\n__Unable to use, Check /help__\n\nSend a photo to set it as your custom thumbnail\nYou can use /deletethumbnail to delete the auto-generated thumbnail.**"
+    FORMAT_SELECTION = "**Select the desired format from the below buttons :\n__Unable to use, Check /help__\n\nSend a photo to set it as your custom thumbnail\nYou can use /deletethumb to delete the auto-generated thumbnail.**"
     SET_CUSTOM_USERNAME_PASSWORD = """**If You Want To Download Premium Videos, Provide in The Following Format:
 URL | filename | username | password**"""
     DOWNLOAD_START = "**📥 Trying To Download, Please Wait..**"
@@ -54,7 +55,7 @@ URL | filename | username | password**"""
     DEL_ETED_CUSTOM_THUMB_NAIL = "**🗑️ Custom Thumbnail Cleared Succesfully.**"
     CUSTOM_CAPTION_UL_FILE = "**© @AVBotz 👀**"
     NO_VOID_FORMAT_FOUND = "**❌ ERROR...\nYouTubeDL Said: {}**"
-    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "**Reply /generatecustomthumbnail To A Media Album, To Generate Custom Thumbail**"
+    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "**Reply /setthumb To A Media Album, To Generate Custom Thumbail**"
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "**Media Album Should Contain Only Two Photos. Please Re-Send The Media Album, And Then Try Again, Or Send Only Two Photos In An Album.**"
     CANCEL_STR = "**🌝 Process Cancelled**"
     ZIP_UPLOADED_STR = "**Uploaded {} Files In {} Seconds**"
@@ -76,7 +77,7 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 ⁍ Send Me A Thumbnail if required. It'll be saved permanently.💯
 ⁍ If Thumbnail Wasn't Set By You, It'll Be Auto Generated From The File.🥳
 ⁍ Send Me Youtube Link To Be Uploaded To Telegram.
-⁍ Press /deletethumbnail To Delete Your Current Custom Thumbnail
+⁍ Press /deletethumb To Delete Your Current Custom Thumbnail
 
 NB : It is Recommended To Use A Custom Thubnail Because, Sometimes the Bot can't Upload files.
 © @AVBotz | @AVBotz_Support**
