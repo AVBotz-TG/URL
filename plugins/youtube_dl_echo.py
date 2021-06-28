@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ©️ @AVBotz 
+# ©️ @AVBotz-TG
 
 # the logging things
 import logging
