@@ -33,7 +33,7 @@ from PIL import Image
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["rename", "f"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["rename", "f"]))
 async def rename_doc(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("**You are BANNED, Contact us [Here](https://t.me/AVBotz_Support) 🤓**")
