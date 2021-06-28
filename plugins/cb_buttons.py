@@ -134,6 +134,10 @@ async def button(bot, update):
     elif "=" in cb_data:
         await ddl_call_back(bot, update)
 
+    elif "close" in cb_data:
+        await update.message.reply_to_message.delete()
+        await update.message.delete()
+        
     elif "helpx" in cb_data:
         button = [[
                 InlineKeyboardButton("🌐 Url Upload", callback_data="urldl"),
@@ -224,9 +228,5 @@ async def button(bot, update):
       await bot.edit_message_text(chat_id=update.message.chat.id,
                            message_id=update.message.message_id,
                            text=Translation.START_MSG.format(update.from_user.first_name),
-                           reply_markup=markup)
-
-      elif "close" in cb_data:
-        await query.message.reply_to_message.delete()
-        await query.message.delete()
-        
+                           reply_markup=markup
+                                 )
