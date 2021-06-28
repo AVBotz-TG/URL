@@ -47,7 +47,7 @@ def GetExpiryDate(chat_id):
                 #)
             #)
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["help"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
 async def help_user(bot, update, cb=False):
     if not cb:
         send_msg = await update.reply_text("**Processing...**", quote=True)
@@ -74,7 +74,7 @@ async def help_user(bot, update, cb=False):
                    reply_markup=InlineKeyboardMarkup(buttons)
                )
       
-@pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["me"]))
 async def get_me_info(bot, update, cb=False):
     if not cb:
         send_msg = await update.reply_text("**Collecting your info...**", quote=True)
@@ -101,7 +101,7 @@ async def get_me_info(bot, update, cb=False):
                )
  
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["about"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
 async def about(bot, update):
   button = [[
                 InlineKeyboardButton("❔ Help", callback_data="morehelp"),
@@ -120,7 +120,7 @@ async def about(bot, update):
         reply_markup=markup
     )
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["start"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 async def start(bot, update, cb=False):
     if not cb:
         send_msg = await update.reply_text("**Processing...**", quote=True)
