@@ -60,8 +60,8 @@ async def progress_for_pyrogram(
             humanbytes(current),
             humanbytes(total),
             # elapsed_time if elapsed_time != '' else "0 s",
-            estimated_total_time if time_to_completion != '' else "0 s"
-        buttons = [[InlineKeyboardButton(f'📢 Updates Channel', url='https://t.me/AVBotz')]] 
+            estimated_total_time if time_to_completion != '' else "0 s", 
+        buttons = [[InlineKeyboardButton(text='📢 Updates Channel', url='https://t.me/AVBotz')]] 
         markup = InlineKeyboardMarkup(buttons) 
         try:
             await msg.edit(text="{}\n {}".format(
