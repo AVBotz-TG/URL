@@ -20,7 +20,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 async def progress_for_pyrogram(
     current,
