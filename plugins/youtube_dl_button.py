@@ -34,7 +34,7 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
-
+from pyrogram.types import InputMediaPhot
 
 async def youtube_dl_call_back(bot, update):
     cb_data = update.data
