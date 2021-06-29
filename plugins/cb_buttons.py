@@ -203,7 +203,7 @@ async def button(bot, update):
     elif "about" in cb_data:
         button = [[
                 InlineKeyboardButton("❔ Help", callback_data="morehelp"),
-                InlineKeyboardButton("🏡 Home", callback_data="about"), 
+                InlineKeyboardButton("🏡 Home", callback_data="home"), 
                 InlineKeyboardButton("⛔ Close", callback_data="close")
                 ],[
                 InlineKeyboardButton("👥 Support Group", url="https://t.me/AVBotz_Support")
