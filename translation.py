@@ -12,7 +12,7 @@ I can download your urls, rename your files, convert your files, download youtub
 Check Below Buttons for more... 
 🤖 Developer : [Animesh Verma](https://t.me/Animesh941)**
 """
-    HELP_USER = """**Hey {}, I'm a All in One Uploader Bot... {With Many Features} 
+    HELP_USER = """**Hey {}, I'm a All in One Uploader Bot... (With Many Features)
     
 ➤ I can Rename your files 📂 
 ➤ I can convert your files 🎞️
@@ -60,7 +60,7 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
     ZIP_UPLOADED_STR = "**Uploaded {} Files In {} Seconds**"
     SLOW_URL_DECED = "**Oops..! Your Given Link is too slow for me to download, Generate a fast link and try again**"
 
-    MOREHELP = """**Hey {}, I'm a All in One Uploader Bot... {With Many Features} 
+    MOREHELP = """**Hey {}, I'm a All in One Uploader Bot... (With Many Features)
     
 ➤ I can Rename your files 📂 
 ➤ I can convert your files 🎞️
