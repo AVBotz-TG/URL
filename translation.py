@@ -12,7 +12,7 @@ I can download your urls, rename your files, convert your files, download youtub
 Check Below Buttons for more... 
 🤖 Developer : [Animesh Verma](https://t.me/Animesh941)**
 """
-    HELP_USER = """**Hey {}, I'm a All in One Uploader Bot... 
+    HELP_USER = """**Hey {}, I'm a All in One Uploader Bot... {With Many Features} 
     
 ➤ I can Rename your files 📂 
 ➤ I can convert your files 🎞️
@@ -44,13 +44,12 @@ __Many More Features Coming Soon... Stay Tuned with @AVBotz ❤️__
 🎉 Congrats, You are the one who selected as the vip user..🎊
 © @AVBotz 👀**"""
 
-    FORMAT_SELECTION = "**Select the desired format from the below buttons :\n__Unable to use, Check /help__\n\nSend a photo to set it as your custom thumbnail\nYou can use /deletethumb to delete the auto-generated thumbnail.**"
-    SET_CUSTOM_USERNAME_PASSWORD = """**If You Want To Download Premium Videos, Provide in The Following Format:
-URL | filename | username | password**"""
+    FORMAT_SELECTION = "**Select the desired format from the below buttons :\n__Unable to use, Check /help__\n\n● Send a photo to set it as your custom thumbnail...\n● You can use /deletethumb to delete the auto-generated thumbnail...**"
+    SET_CUSTOM_USERNAME_PASSWORD = """© @AVBotz | @AVBotz_Support ❤️"""
     DOWNLOAD_START = "**📥 Trying To Download, Please Wait..**"
     UPLOAD_START = "**📤 Trying To Upload, Please Wait..**"
     RCHD_TG_API_LIMIT = "**Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I Cannot Upload Files Greater Than 1.9GB Due To Telegram API Limitations.**"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded In {} Seconds. \nUploaded In {} Seconds. \n\n Join @AVBotz ❤️**"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "**Downloaded In {} Seconds. \nUploaded In {} Seconds. \n\n© Join @AVBotz ❤️**"
     SAVED_CUSTOM_THUMB_NAIL = "**🖼 Custom Video / File Thumbnail Saved. This Image Will Be Used In The Video / File.**"
     DEL_ETED_CUSTOM_THUMB_NAIL = "**🗑️ Custom Thumbnail Cleared Succesfully.**"
     CUSTOM_CAPTION_UL_FILE = "**© @AVBotz 👀**"
@@ -61,7 +60,8 @@ URL | filename | username | password**"""
     ZIP_UPLOADED_STR = "**Uploaded {} Files In {} Seconds**"
     SLOW_URL_DECED = "**Oops..! Your Given Link is too slow for me to download, Generate a fast link and try again**"
 
-    MOREHELP = """**Hey {}, I'm "All in One Uploader Bot" 
+    MOREHELP = """**Hey {}, I'm a All in One Uploader Bot... {With Many Features} 
+    
 ➤ I can Rename your files 📂 
 ➤ I can convert your files 🎞️
 ➤ I can download your files using url links.. 
