@@ -137,7 +137,7 @@ async def echo(bot, update):
     # https://github.com/rg3/youtube-dl/issues/2630#issuecomment-38635239
     if e_response and "nonnumeric port" not in e_response:
         # logger.warn("Status : FAIL", exc.returncode, exc.output)
-        error_message = e_response.replace("**Unable to download using this link, May be Corrupted or age restricted 🙄**" )
+        error_message = e_response.replace("**Unable to download using this link, May be Corrupted or age restricted 🙄**","")
         if "This video is only available for registered users." in error_message:
             error_message += Translation.SET_CUSTOM_USERNAME_PASSWORD
         await bot.send_message(
